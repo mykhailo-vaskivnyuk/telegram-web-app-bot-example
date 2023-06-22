@@ -12,6 +12,9 @@
     <title></title>
     <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
     <script>
+        console.log(window.location);
+    </script>
+    <script>
         function setThemeClass() {
             document.documentElement.className = Telegram.WebApp.colorScheme;
         }
@@ -633,15 +636,15 @@
             return false;
         },
         testClipboard(el) {
-            Telegram.WebApp.readTextFromClipboard(function(clipText) {
-                if (clipText === null) {
-                    el.nextElementSibling.innerHTML = 'Clipboard text unavailable.';
-                    el.nextElementSibling.className = 'err';
-                } else {
-                    el.nextElementSibling.innerHTML = '(Read from clipboard: Â«' + clipText + 'Â»)';
-                    el.nextElementSibling.className = 'ok';
-                }
-            });
+            // Telegram.WebApp.readTextFromClipboard(function(clipText) {
+            //     if (clipText === null) {
+            //         el.nextElementSibling.innerHTML = 'Clipboard text unavailable.';
+            //         el.nextElementSibling.className = 'err';
+            //     } else {
+            //         el.nextElementSibling.innerHTML = '(Read from clipboard: Â«' + clipText + 'Â»)';
+            //         el.nextElementSibling.className = 'ok';
+            //     }
+            // });
             return false;
         },
 
